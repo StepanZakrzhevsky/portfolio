@@ -1,105 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="css/outlines.css">
+<!--    <link rel="stylesheet" href="css/outlines.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="description" content="Портфолио, Степан, Закржевский">
     <title>Портфолио</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#section1">Обо мне</a>
-            <a href="#section2">Навыки</a>
-            <a href="#section3">Интересы</a>
-            <a href="#section4">Контакты</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Степан Закржевский</h1>
-            <h2>Программист</h2>
-            <img src="img/user-photo.jpg" width="400" height="400" alt="Фото автора">
-        </section>
-        <section id="section1">
-            <h2>Пара слов обо мне</h2>
-            <p>Привет!</p>
-            <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и вычислительная техника».</p>
-            <p>В прошлом году защитил диплом бакалавра на тему «Разработка мобильного приложения для ведения индивидуального графика тренировок и плана питания». Работа была высоко оценена комиссией.</p>
-            <p>Также я работаю в АО НВП "Болид" САПР-разработчиком.</p>
-        </section>
-        <section id="section2">
-            <h2>Мои навыки</h2>
-            Сортировать
-            <button>по названию</button>
-            <button>по уровню</button>
-            <dl>
-                <dt>html</dt>
-                <dd>
-                    <div style="width: 20%">20%</div>
-                </dd>
-                <dt>css</dt>
-                <dd>
-                    <div style="width: 5%">5%</div>
-                </dd>
-                <dt>C#</dt>
-                <dd>
-                    <div style="width: 70%">70%</div>
-                </dd>
-                <dt>C++</dt>
-                <dd>
-                    <div style="width: 50%">50%</div>
-                </dd>
-            </dl>
-        </section>
-        <section id="section3">
-            <h2>Мои интересы</h2>
-            <p>Наибольший интерес для меня в данный момент представляет десктопное программирование</p>
-            <p>Но помимо учёбы и работы я занимаюсь спортом и предпочитаю совместный с друзьями досуг</p>
-        </section>
-        <section id="section4">
-            <h2>Мои контакты</h2>
-            <ul>
-                <li><a href="tel:+79653052061">+7 965 305-20-61</a></li>
-                <li><a href="mailto:stepanzakrzhevsky@mail.ru">stepanzakrzhevsky@mail.ru</a></li>
-            </ul>
+    <div class="container">
+        <header class="main-header">
+            <div class="main-header-cont">
+                <a><img class="rounded" alt="Заставка" src="img/main-logo.jpg"/></a>
+                <button class="nav-btn">
+                    <span class="hide">Закрыть меню</span>
+                </button>
+            </div>
+            <nav  class="main-nav">
+                <a href="#about">Обо мне</a>
+                <a href="#skills">Навыки</a>
+                <a href="#interests">Интересы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </header>
+        <main>
+           
+            <section id="name">
+                <div class="user-container">
+                    <div class="text-container">
+                        <h1>Степан Закржевский</h1>
+                        <p class="subtitle">Программист</p>
+                    </div>
+                    <img class="round_ava" src="img/user-photo.jpg" width="400" height="400" alt="Фото     автора">
+                </div>
+            </section>
             
-            <ul>
-                <li>
-                    <a href="https://t.me/stepan_vyacheslavovich">
-<!--                        <img src="img/social=telegram.svg" alt="tg">-->
-                        Telegram
+            <section id="about" class="about">
+                <div class="text-separator">
+                    <h2>Пара слов обо мне</h2>
+                    <p>Привет!</p>
+                    <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и вычислительная техника».</p>
+                    <p>В прошлом году защитил диплом бакалавра на тему «Разработка мобильного приложения для ведения индивидуального графика тренировок и плана питания». Работа была высоко оценена комиссией.</p>
+                    <p>Также я работаю в АО НВП "Болид" САПР-разработчиком.</p>
+                </div>
+            </section>
+            
+            <section id="skills" class="skills">
+                <div class="skills-header">
+                    <h2>Мои навыки</h2>
+                    <div class="skills-header-btns">
+                        <div>Сортировать</div>
+                        <button>по названию</button>
+                        <button>по уровню</button>
+                    </div>
+                </div>
+                
+                <dl class="skills_list">
+                    <dt class="html_icon">html</dt>
+                    <dd class="progress-bar">
+                        <div class="progress-bar2" style="width: 20%"></div>
+                    </dd>
+                    <dt class="css_icon">css</dt>
+                    <dd class="progress-bar">
+                        <div class="progress-bar2" style="width: 5%"></div>
+                    </dd>
+                    <dt class="csharp_icon">C#</dt>
+                    <dd class="progress-bar">
+                        <div class="progress-bar2" style="width: 70%"></div>
+                    </dd>
+                    <dt class="cpp_icon">C++</dt>
+                    <dd class="progress-bar">
+                        <div class="progress-bar2" style="width: 50%"></div>
+                    </dd>
+                </dl>
+            </section>
+            
+            <section id="interests" class="interests">
+                <div class="text-separator">
+                    <h2>Мои интересы</h2>
+                    <p>Наибольший интерес для меня в данный момент представляет десктопное программирование</p>
+                    <p>Но помимо учёбы и работы я занимаюсь спортом и предпочитаю совместный с друзьями досуг</p>
+                </div>
+            </section>
+            
+            <section id="contacts" class="contacts">
+                <h2>Мои контакты</h2>
+                
+                <div class="contacts-block">
+                    <a href="tel:+79653052061" class="phone-link">
+                        +7 965 305-20-61
                     </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/stepan_vyacheslavovich?igsh=NTdkOWk1Y3pkeGM0&utm_source=qr">
-<!--                        <img src="img/social=instagram.svg" alt="instagram">-->
-                        Instagram
+                    <a href="mailto:stepanzakrzhevsky@mail.ru" class="email-link">
+                        stepanzakrzhevsky@mail.ru
                     </a>
-                </li>
-                <li>
-                    <a href="https://vk.com/m001ur777">
-<!--                        <img src="img/social=vk.svg" alt="vk">-->
-                        Вконтакте
-                    </a>
-                </li>
-                <li>
-                    <a href="nothing">
-<!--                        <img src="img/social=github.svg" alt="github">-->
-                        GitHub
-                    </a> 
-                </li>
-                <li>
-                    <a href="nothing">
-<!--                        <img src="img/social=gitlab.svg" alt="gitlab">-->
-                        GitLab
-                    </a>
-                </li>
-            </ul>       
-        </section>
-    </main>
-    <footer id="footer">
-        © 2025 Степан Закржевский
+                </div>
+                <div class="social">
+                    <a href="https://t.me/stepan_vyacheslavovich" class="social-link-tg social-block"></a>
+                    <a href="https://www.instagram.com/stepan_vyacheslavovich?igsh=NTdkOWk1Y3pkeGM0&utm_source=qr" class="social-link-inst social-block"></a>
+                    <a href="nothing" class="social-link-git social-block"></a>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+    <footer id="footer" class="main-footer">
+        <div class="container">© 2025 Степан Закржевский</div>
     </footer>
 </body>
 </html>

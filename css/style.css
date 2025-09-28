@@ -27,6 +27,7 @@ h1 {
   font-size: 60px;
   line-height: 1.1;
   color: var(--txtColor);
+  margin: 0;
 }
 
 h2 {
@@ -326,6 +327,19 @@ button {
 .social-link-git {
   background-image: url("../img/social=github.svg");
   text-decoration: none;
+}
+
+.main-header {
+    display: flex;
+    padding-top: 60px;
+    gap: 0px;
+    align-items: center;
+    width: 1240px;
+    height: 120px;
+}
+
+.main-header nav{
+    display: flex;
 }
 
 .main-footer {

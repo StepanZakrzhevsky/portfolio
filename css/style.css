@@ -73,12 +73,12 @@ button {
   display: flex;
 }
 .main-nav a {
-  display: flex;
+  display: inline-block;
   padding: 10px 15px;
-  align-items: center;
   color: var(--txtColor);
   text-decoration: none;
 }
+
 
 .main-nav a:hover {
   color: var(--green);
@@ -89,6 +89,7 @@ button {
   align-items: center;
   gap: 70px;
   margin-bottom: 120px;
+  margin-top: 120px;
   justify-content: space-between;
 }
 
@@ -113,7 +114,7 @@ button {
   object-fit: cover;
 }
 
-.text-separator {
+.text-wrapper {
   max-width: 800px;
 }
 
@@ -233,7 +234,6 @@ button {
 }
 
 .contacts-block {
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 45px;

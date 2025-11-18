@@ -334,7 +334,9 @@ button {
     padding-top: 60px;
     gap: 0px;
     align-items: center;
-    width: 1240px;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
     height: 120px;
 }
 
@@ -356,4 +358,268 @@ button {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px 0 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+    font-size: 50px;
+    }
+
+    h2 {
+    font-size: 24px;
+    margin: 0 0 40px 0;
+    }
+
+    h3 {
+    font-size: 18px;
+    }
+
+    .rounded {
+    height: 60px;
+    width: 60px;
+    margin-right: 0;
+    }
+
+    body {
+    font-size: 16px;
+    }
+
+    .round_ava {
+    width: 250px;
+    height: 250px;
+    }
+
+    .subtitle {
+    font-size: 28px;
+    }
+
+    .main-header {
+    margin-bottom: 80px;
+    gap: 40px;
+    }
+
+    .main-footer {
+    margin-top: 80px;
+    }
+
+    .about {
+    margin-bottom: 80px;
+    }
+
+    .skills {
+    margin-bottom: 80px;
+    }
+
+    .interests {
+    margin-bottom: 80px;
+    }
+
+    .user-container {
+    margin-bottom: 80px;
+    }
+
+    .contacts-block a {
+    font-size: 16px;
+    }
+
+    .contacts-block {
+    gap: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    h1 {
+    font-size: 32px;
+    }
+
+    h2 {
+    font-size: 20px;
+    margin: 0 0 30px 0;
+    }
+
+    h3 {
+    font-size: 16px;
+    }
+
+    .rounded {
+    height: 40px;
+    width: 40px;
+    }
+
+    body {
+    font-size: 14px;
+    }
+
+    .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    }
+
+    .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    gap: 20px;
+    height: auto !important;
+    }
+
+    .main-header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 50px;
+/*    padding-bottom: 20px;*/
+    }
+
+    .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    }
+
+    .main-header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    }
+
+    .nav-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    }
+
+    .nav-btn-close {
+    background-image: url(../img/close.svg);
+    }
+
+    .subtitle {
+    font-size: 20px;
+    }
+
+    .social {
+    margin-top: 20px;
+    gap: 15px;
+    }
+
+    .contacts-block a {
+    font-size: 14px;
+    }
+
+    .user-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 0;
+    margin-top: 0;
+    justify-content: flex-start;
+    }
+
+    .round_ava {
+    display: block;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto 0px auto;
+    order: 0;
+    }
+
+    .skills-header {
+    margin-bottom: 20px;
+    }
+
+    .text-container {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    order: 1;
+    gap: 10px;
+    }
+
+    .main-footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    }
+
+    .about {
+    margin-bottom: 50px;
+    }
+
+    .skills {
+    margin-bottom: 50px;
+    }
+
+    .interests {
+    margin-bottom: 50px;
+    }
+
+    .user-container {
+    margin-bottom: 50px;
+    }
+
+    .contacts-block {
+    gap: 40px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .skills-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    gap: 20px;
+    }
+    
+    .skills-header h2 {
+    width: 100%;
+    }
+    
+    .skillsHeaderRight {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    }
+    
+    .skills-header-btns > div,
+    .skills-header-btns > button {
+    width: 100%;
+    padding-bottom: 6px;
+    }
+    
+    .contacts-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    }
+    
+    .contacts-block ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .contacts-block a {
+    width: 100%;
+    text-align: left;
+    display: block;
+    padding-top: 10px;
+    }
+
+    .skills_list {
+    margin-top: 25px;
+    }
 }

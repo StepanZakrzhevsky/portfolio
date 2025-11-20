@@ -194,21 +194,23 @@ button {
   background-size: 30px 30px;
 }
 
-.html_icon {
+/*
+.skill-item-html {
   background-image: url("../img/skill=html.svg");
 }
 
-.css_icon {
+.skill-item-css {
   background-image: url("../img/skill=css.svg");
 }
 
-.csharp_icon {
+.skill-item-csharp {
   background-image: url("../img/skill=c++++.svg");
 }
 
-.cpp_icon {
+.skill-item-cpp {
   background-image: url("../img/skill=c++.svg");
 }
+*/
 
 .progress-bar {
   margin: 10px 0 17px;

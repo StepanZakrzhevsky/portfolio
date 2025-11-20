@@ -500,9 +500,17 @@ button {
     width: 30px;
     height: 30px;
     }
+    
+    .main-nav-closed{
+    display: none !important;
+    }
 
     .nav-btn-close {
     background-image: url(../img/close.svg);
+    }
+
+    .nav-btn-open {
+        background-image: url(../img/burger.svg);
     }
 
     .subtitle {

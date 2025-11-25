@@ -26,6 +26,7 @@ h1 {
   font-weight: 700;
   font-size: 60px;
   line-height: 1.1;
+  font-style: bold;
   color: var(--txtColor);
   margin: 0;
 }
@@ -89,7 +90,7 @@ button {
   align-items: center;
   gap: 70px;
   margin-bottom: 120px;
-  margin-top: 120px;
+  margin-top: 80px;
   justify-content: space-between;
 }
 
@@ -133,6 +134,7 @@ button {
   width: 100%;
   max-width: 1240px;
   margin-bottom: 30px;
+  height: 32px;
 }
 
 .skills-header h2 {
@@ -151,7 +153,7 @@ button {
 .skills-header-btns div {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: 0;
   color: var(--txtColor);
@@ -163,10 +165,10 @@ button {
   padding: 6px 10px 10px 10px; /* top right bottom left */
   background: transparent;
   color: var(--green);
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
-  height: 36px;
+  height: 32px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -279,7 +281,7 @@ button {
 }
 
 .phone-link {
-  background-image: url("../img/ContactsIcon.svg");
+  background-image: url("../img/phone.svg");
 }
 
 .email-link {
@@ -365,11 +367,13 @@ button {
 @media screen and (max-width: 1024px) {
     h1 {
     font-size: 50px;
+    font-style: bold;
     }
 
     h2 {
     font-size: 24px;
     margin: 0 0 40px 0;
+    width: 160px;
     }
 
     h3 {
@@ -427,6 +431,7 @@ button {
     .contacts-block {
     gap: 40px;
     }
+    
 }
 
 @media screen and (max-width: 650px) {
@@ -507,10 +512,12 @@ button {
 
     .nav-btn-close {
     background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
     }
 
     .nav-btn-open {
-        background-image: url(../img/burger.svg);
+    background-image: url(../img/burger.svg);
+    background-repeat: no-repeat;
     }
 
     .subtitle {
@@ -544,7 +551,41 @@ button {
     }
 
     .skills-header {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    height: 30px;
+    }
+    
+    .skills-header > h2 {
+    width: 133;
+    height: 24;
+    }
+    
+/*
+    .skills-header-btns {
+    width: 333;
+    height: 30;
+    gap: 20px;
+    angle: 0 deg;
+    opacity: 1;
+    }
+*/
+    .skills-header-btns > div {
+    width: 89;
+    height: 21;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    }
+    
+    .skills-header-btns > button {
+    width: 110;
+    height: 30;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 100%;
     }
 
     .text-container {
@@ -591,9 +632,14 @@ button {
     
     .skills-header h2 {
     width: 100%;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
     }
     
-    .skillsHeaderRight {
+    .skills-header-btns {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -615,11 +661,11 @@ button {
     }
     
     .contacts-block ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 0;
-        margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
     }
     
     .contacts-block a {
@@ -630,6 +676,27 @@ button {
     }
 
     .skills_list {
-    margin-top: 25px;
+    margin-top: 150px;
+    }
+}
+
+@media (max-width: 850px) {
+    .user-container {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .contacts-block ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .contacts-block a {
+        width: 100%;
+        text-align: left;
     }
 }

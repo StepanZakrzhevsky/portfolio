@@ -90,7 +90,7 @@ button {
   align-items: center;
   gap: 70px;
   margin-bottom: 120px;
-  margin-top: 80px;
+  margin-top: 120px;
   justify-content: space-between;
 }
 
@@ -195,24 +195,6 @@ button {
   background-repeat: no-repeat;
   background-size: 30px 30px;
 }
-
-/*
-.skill-item-html {
-  background-image: url("../img/skill=html.svg");
-}
-
-.skill-item-css {
-  background-image: url("../img/skill=css.svg");
-}
-
-.skill-item-csharp {
-  background-image: url("../img/skill=c++++.svg");
-}
-
-.skill-item-cpp {
-  background-image: url("../img/skill=c++.svg");
-}
-*/
 
 .progress-bar {
   margin: 10px 0 17px;
@@ -373,7 +355,7 @@ button {
     h2 {
     font-size: 24px;
     margin: 0 0 40px 0;
-    width: 160px;
+/*    width: 160px;*/
     }
 
     h3 {

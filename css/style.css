@@ -403,6 +403,7 @@ button {
     }
 
     .user-container {
+    margin-top: 80px;
     margin-bottom: 80px;
     }
 
@@ -463,7 +464,6 @@ button {
     align-items: flex-start;
     width: 100%;
     height: 50px;
-/*    padding-bottom: 20px;*/
     }
 
     .main-nav {
@@ -522,6 +522,8 @@ button {
     margin-bottom: 0;
     margin-top: 0;
     justify-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
     }
 
     .round_ava {
@@ -542,15 +544,6 @@ button {
     height: 24;
     }
     
-/*
-    .skills-header-btns {
-    width: 333;
-    height: 30;
-    gap: 20px;
-    angle: 0 deg;
-    opacity: 1;
-    }
-*/
     .skills-header-btns > div {
     width: 89;
     height: 21;
@@ -608,7 +601,6 @@ button {
     .skills-header {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     gap: 20px;
     }
     
@@ -656,29 +648,59 @@ button {
     display: block;
     padding-top: 10px;
     }
-
-    .skills_list {
-    margin-top: 150px;
-    }
 }
 
 @media (max-width: 850px) {
     .user-container {
-        margin-top: 60px;
-        margin-bottom: 60px;
-        gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
     }
 }
 
 @media (max-width: 520px) {
     .contacts-block ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
     }
 
     .contacts-block a {
-        width: 100%;
-        text-align: left;
+    width: 100%;
+    text-align: left;
+    }
+    
+    .skills-header {
+    display: flex;
+    flex-direction: column;
+    height: 145px;
+    gap: 20px;
+    }
+    
+    .skills-header h2 {
+    width: 100%;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    }
+    
+    .skills-header-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    }
+    
+    .skills-header-btns > div,
+    .skills-header-btns > button {
+    width: 100%;
+    padding-bottom: 6px;
+    }
+    
+    .skills_list {
+    height: 276px;
     }
 }

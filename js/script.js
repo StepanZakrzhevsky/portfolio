@@ -1,50 +1,3 @@
-/*
-const skills = {
-    data: [
-        { name: "HTML", level: 20, icon: "skill=html.svg" },
-        { name: "CSS", level: 5, icon: "skill=css.svg" },
-        { name: "C#", level: 70, icon: "skill=c++++.svg" },
-        { name: "C++", level: 50, icon: "skill=c++.svg" }
-    ],
-
-    generateList(parentElement) {
-        this.data.forEach(skill => {
-            const dt = document.createElement("dt");
-            dt.classList.add("skill-item");
-            dt.textContent = skill.name;
-
-            dt.style.backgroundImage = `url("img/${skill.icon}")`;
-
-            const dd = document.createElement("dd");
-            dd.classList.add("progress-bar");
-
-            const bar = document.createElement("div");
-            bar.classList.add("progress-bar2");
-            bar.style.width = skill.level + "%";
-
-            dd.appendChild(bar);
-            parentElement.appendChild(dt);
-            parentElement.appendChild(dd);
-        });
-    }
-};
-
-const skillList = document.querySelector(".skills_list");
-skills.generateList(skillList);
-
-sortBtns = document.querySelector('.skills-header');
-sortBtns.addEventListener('click', (e) => {
-	if e.target.nodeName == 'Button' {
-		console.log(e.target);
-	}
-})
-*/
-
-
-
-
-
-
 function getComparer(prop, reverse) {
   return function (a, b) {
     if (a[prop] < b[prop]) return reverse ? 1 : -1;
@@ -107,9 +60,9 @@ const skills = {
 skills.skills_list = document.querySelector("dl.skills_list");
 skills.generateList(skills.skills_list);
 
-let buttons = document.querySelector("div.skills-header-btns");
+const buttons = document.querySelector("div.skills-header-btns");
 buttons.addEventListener("click", (e) => {
-  let target = e.target;
+  const target = e.target;
   if (target.nodeName === "BUTTON") {
     switch (target.dataset.type) {
       case 'name':
@@ -124,29 +77,35 @@ buttons.addEventListener("click", (e) => {
   }
 });
 
-let menu = document.querySelector("nav.main-nav");
-let navBtn = document.querySelector("button.nav-btn");
+const menu = {
+  element: document.querySelector("nav.main-nav"),
+  button: document.querySelector("button.nav-btn"),
 
-menu.open = function() {
-  this.classList.remove("main-nav-closed");
-  navBtn.classList.remove("nav-btn-open");
-  navBtn.classList.add("nav-btn-close");
-  navBtn.querySelector(".hide").textContent = "Закрыть меню";
-};
+  open() {
+    this.element.classList.remove("main-nav-closed");
+    this.button.classList.remove("nav-btn-open");
+    this.button.classList.add("nav-btn-close");
+    this.button.querySelector(".hide").textContent = "Закрыть меню";
+  },
 
-menu.close = function() {
-  this.classList.add("main-nav-closed");
-  navBtn.classList.remove("nav-btn-close");
-  navBtn.classList.add("nav-btn-open");
-  navBtn.querySelector(".hide").textContent = "Открыть меню";
-};
+  close() {
+    this.element.classList.add("main-nav-closed");
+    this.button.classList.remove("nav-btn-close");
+    this.button.classList.add("nav-btn-open");
+    this.button.querySelector(".hide").textContent = "Открыть меню";
+  },
 
-navBtn.addEventListener("click", (e) => {
-  if (e.target.classList.contains("nav-btn-open")) {
-    menu.open();
-  } else {
-    menu.close();
+  init() {
+    this.button.addEventListener("click", () => {
+      if (this.button.classList.contains("nav-btn-open")) {
+        this.open();
+      } else {
+        this.close();
+      }
+    });
+
+    this.close();
   }
-});
+};
 
-menu.close();
+menu.init();

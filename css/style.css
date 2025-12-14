@@ -8,6 +8,67 @@
   --white: white;
   --green: #09a494;
   --txtColor: #212121;
+  --bg-color: #ffffff;
+}
+
+.dark-theme {
+  --txtColor: #CCCCCC;
+  --bg-color: #031923;
+}
+
+.switch {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 34px;
+}
+
+.switch-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.switch-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: #CCCCCC;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.switch-slider:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  bottom: 0;
+  height: 40px;
+  width: 40px;
+  margin: auto 0;
+  border: 1px solid #CCCCCC;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  background-image: url('../img/moon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  transition: 0.4s;
+}
+
+.switch-checkbox:checked + .switch-slider:before {
+  transform: translateX(24px);
+  background-color: #FFFFFF;
+  background-image: url('../img/sun.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
 }
 
 
@@ -19,6 +80,7 @@ body {
     font-style: normal;
     letter-spacing: 0;
     color: var(--txtColor);
+    background-color: var(--bg-color);
 }
 
 h1 {
@@ -66,8 +128,17 @@ button {
   display: none;
 }
 
-.hide {
-  display: none;
+.nav-btn-hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-nav {
@@ -117,6 +188,7 @@ button {
 
 .text-wrapper {
   max-width: 800px;
+  color: var(--txtColor);
 }
 
 .about {
@@ -135,6 +207,8 @@ button {
   max-width: 1240px;
   margin-bottom: 30px;
   height: 32px;
+    
+  color: var(--txtColor);
 }
 
 .skills-header h2 {
@@ -194,6 +268,7 @@ button {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 30px 30px;
+  color: var(--txtColor);
 }
 
 .progress-bar {
@@ -262,6 +337,14 @@ button {
   overflow: visible;
 }
 
+.dark-theme .phone-link {
+  background-image: url("../img/dark-phone.svg");
+}
+
+.dark-theme .email-link {
+  background-image: url("../img/dark-mail.svg");
+}
+
 .phone-link {
   background-image: url("../img/phone.svg");
 }
@@ -293,6 +376,10 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
+}
+
+.dark-theme .social-block {
+  background-color: #CCCCCC;
 }
 
 .social a:hover {
@@ -332,11 +419,15 @@ button {
 
 .main-footer {
   background: var(--txtColor);
-  color: var(--white);
   width: 100%;
   margin-top: 120px;
   padding-top: 50px;
   padding-bottom: 50px;
+  color: var(--bg-color);
+}
+
+.dark-theme .main-footer {
+  color: var(--bg-color);
 }
 
 .container {

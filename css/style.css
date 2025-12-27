@@ -236,7 +236,7 @@ button {
 .skills-header-btns button {
   border: 1px solid var(--green);
   border-radius: 8px;
-  padding: 6px 10px 10px 10px; /* top right bottom left */
+  padding: 6px 10px 10px 10px;
   background: transparent;
   color: var(--green);
   font-size: 16px;
@@ -428,6 +428,7 @@ button {
 
 .dark-theme .main-footer {
   color: var(--bg-color);
+  background-color: #09A494;
 }
 
 .container {
@@ -446,7 +447,6 @@ button {
     h2 {
     font-size: 24px;
     margin: 0 0 40px 0;
-/*    width: 160px;*/
     }
 
     h3 {

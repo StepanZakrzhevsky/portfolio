@@ -85,7 +85,6 @@ const menu = {
     this.element.classList.remove("main-nav-closed");
     this.button.classList.remove("nav-btn-open");
     this.button.classList.add("nav-btn-close");
-    //this.button.querySelector(".hide").textContent = "Закрыть меню";
     this.button.querySelector(".nav-btn-hide").textContent = "Закрыть меню";
   },
 
@@ -93,7 +92,6 @@ const menu = {
     this.element.classList.add("main-nav-closed");
     this.button.classList.remove("nav-btn-close");
     this.button.classList.add("nav-btn-open");
-    //this.button.querySelector(".hide").textContent = "Открыть меню";
     this.button.querySelector(".nav-btn-hide").textContent = "Открыть меню";
   },
 
@@ -115,24 +113,17 @@ menu.init();
 const checkbox = document.querySelector('.switch-checkbox');
 const body = document.body;
 
-function applyTheme(isChecked) {
-  if (isChecked) {
-    body.classList.remove('dark-theme');
-  } else {
-    body.classList.add('dark-theme');
-  }
-  checkbox.checked = isChecked;
+
+function applyTheme(isDark) {
+  body.classList.toggle('dark-theme', isDark);
+  checkbox.checked = isDark;
 }
 
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme !== null) {
-  applyTheme(savedTheme === 'dark');
-} else {
-  applyTheme(true);
-}
+applyTheme(savedTheme === 'dark');
 
 checkbox.addEventListener('change', () => {
-  const theme = checkbox.checked ? 'dark' : 'light';
-  applyTheme(checkbox.checked);
-  localStorage.setItem('theme', theme);
+  const isDark = checkbox.checked;
+  applyTheme(isDark);
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
